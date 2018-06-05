@@ -7,9 +7,9 @@ const setCursorPosition = (pos, elem) => {
     range.collapse(true);
     range.moveEnd("character", pos);
     range.moveStart("character", pos);
-    range.select()
+    range.select();
   }
-}
+};
 
 const mask = (event) => {
   const matrix = `+7 (___) ___-__-__`;
@@ -28,10 +28,10 @@ const mask = (event) => {
   // Modifying mask
   input.value = matrix.replace(/./g, function(element) {
     if (/[_\d]/.test(element) && i < val.length) {
-      return val.charAt(i++)
+      return val.charAt(i++);
     } else {
       if (i >= val.length) {
-        return ``
+        return ``;
       } else {
         return element;
       }

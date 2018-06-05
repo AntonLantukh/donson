@@ -1,8 +1,8 @@
 import 'babel-polyfill';
 import 'whatwg-fetch';
-import mask from './phone-mask.js'
-import {checkName, checkMail, checkPhone} from './validation.js'
-import uploadData from './uploader.js'
+import mask from './phone-mask.js';
+import {checkName, checkMail, checkPhone} from './validation.js';
+import uploadData from './uploader.js';
 
 const buttonContact = document.querySelector(`.header-top__call`);
 const body = document.querySelector(`body`);
@@ -27,11 +27,11 @@ const modalTemplate = () => {
       <button class="modal__submit main-button" type="submit">Отправить</button>
     </form>
   </div>`;
-}
+};
 
 const modalOverlayTemplate = () => {
   return `<div class="modal-overlay"></div>`;
-}
+};
 
 // Function to create a node from html template
 const getElementFromTemplate = (template) => {
@@ -52,7 +52,7 @@ const hideModal = () => {
     body.removeChild(modal);
     body.removeChild(modalOverlay);
   }, 1000);
-}
+};
 
 // Function to delete popup at cross sign
 const onPopEscPress = (evt) => {
@@ -61,12 +61,12 @@ const onPopEscPress = (evt) => {
     hideModal();
     document.removeEventListener(`keydown`, onPopEscPress);
   }
-}
+};
 
 // Function to delete popup at overlay click
-const onOverlayPress = (evt) => {
+const onOverlayPress = () => {
   hideModal();
-}
+};
 
 // If clicking contact button
 buttonContact.addEventListener(`click`, function() {
@@ -95,7 +95,7 @@ buttonContact.addEventListener(`click`, function() {
   // Closing the modal at cross sign
   closeButton.addEventListener(`click`, function() {
     hideModal();
-  })
+  });
   // Closing the modal at submit
   submitButton.addEventListener(`click`, function(event) {
     event.preventDefault();
@@ -104,13 +104,12 @@ buttonContact.addEventListener(`click`, function() {
     mail.addEventListener('blur', checkMail(), false);
     name.addEventListener('blur', checkName(), false);
     const allRight =  Array.from(inputs).every((element) => {
-      debugger;
       return element.checkValidity() !== false;
-    })
+    });
     if (allRight) {
       const data = new FormData(formData);
       uploadData(data);
       hideModal();
     }
-  })
-})
+  });
+});

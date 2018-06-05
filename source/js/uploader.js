@@ -2,7 +2,7 @@
 const showData = (res) => {
   const newsBlock = document.querySelector(`body`);
   newsBlock.insertAdjacentHTML(`afterBegin`, res);
-}
+};
 
 // Showing error
 const showError = (error) => {
@@ -10,7 +10,7 @@ const showError = (error) => {
         <p class="error">Произошла ошибка ${error} =(</p>
         <p class="error">Пожалуйста, попробуйте перезагрузить страницу.</p>
       </div>`);
-}
+};
 
 const checkStatus = (response) => {
   return new Promise((onSuccess) => {
@@ -33,6 +33,6 @@ const uploadData = (data) => {
   fetch(`http://date.jsontest.com/`, requestSettings)
     .then(checkStatus)
     .catch(showError);
- }
+ };
 
 export default uploadData;
