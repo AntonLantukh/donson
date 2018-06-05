@@ -1,0 +1,14 @@
+// Служебные
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "visually-hidden.scss";
+/// Основные блоки
+@import "main-button.scss";
+@import "header-top.scss";
+@import "header-bottom.scss";
+@import "promo.scss";
+@import "video.scss";
+@import "modal.scss";
+@import "modal-overlay.scss";
+@import "error.scss";

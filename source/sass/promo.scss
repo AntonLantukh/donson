@@ -1,0 +1,117 @@
+.promo {
+  background-image: url("../img/fabric.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.promo__wrapper {
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 21px;
+}
+
+.promo__container {
+  position: relative;
+  width: 660px;
+  box-sizing: border-box;
+  padding: 16px 20px 37px 19px;
+  background-color: $color-white;
+
+  &::before {
+    position: absolute;
+    left: -117px;
+    bottom: -52px;
+    width: 257px;
+    height: 142px;
+    content: "";
+    background-image: url("../img/mat.png");
+  }
+
+  &::after {
+    position: absolute;
+    left: 31px;
+    top: 111px;
+    width: 1px;
+    height: 165px;
+    content: "";
+    background-color: $color-grey-dark;
+  }
+}
+
+.promo__first-header {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 17px 0 0;
+  padding: 25px 10px 5px 21px;
+  font-size: 30.2px;
+  line-height: 42.81px;
+  background-color: $color-blue;
+  font-family: "Glober Regular", "Arial", sans-serif;
+  color: $color-white;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.promo__second-header {
+  margin: 0;
+  font-size: 26.1px;
+  line-height: 29.18px;
+  font-family: "Glober Regular", "Arial", sans-serif;
+  color: $color-blue;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.promo__marked {
+  display: block;
+  font-size: 16.1px;
+  line-height: 32.3px;
+  font-family: "Glober Regular", "Arial", sans-serif;
+  color: $color-grey-dark;
+  text-transform: uppercase;
+}
+
+.promo__marked--second {
+  margin-left: 2px;
+}
+
+.promo__paragraph {
+  margin: 0 0 0 20px;
+  padding-bottom: 13px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Glober Light", "Arial", sans-serif;
+  color: $color-grey-dark;
+}
+
+.promo__paragraph--last {
+  text-indent: 5px;
+}
+
+.promo__button {
+  display: block;
+  box-sizing: border-box;
+  width: 215px;
+  padding: 13px 31px 7px;
+  text-decoration: none;
+}
+
+.promo__more-info {
+  display: block;
+  width: 215px;
+
+  &::after {
+    position: absolute;
+    bottom: -65%;
+    left: 45%;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border-radius: 50%;
+    background-color: $color-yellow;
+    background-image: url("../img/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

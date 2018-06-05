@@ -1,0 +1,42 @@
+.main-button {
+  position: relative;
+  margin: 0 auto;
+  padding: 13px 37px 7px;
+  font-size: 16px;
+  line-height: 19.63px;
+  background-color: $color-yellow;
+  border: 0;
+  outline: none;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  font-family: "Glober Regular", "Arial", sans-serif;
+  color: $color-grey-dark;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    content: "";
+    background-color: $color-black;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    content: "";
+    background-color: $color-black;
+  }
+}

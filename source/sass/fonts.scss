@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Glober Regular";
+  src:
+  url("../fonts/globerregular.woff") format("woff"),
+  url("../fonts/globerregular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glober Bold";
+  src:
+  url("../fonts/globerbold.woff") format("woff"),
+  url("../fonts/globerbold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glober Light";
+  src:
+  url("../fonts/globerlight.woff") format("woff"),
+  url("../fonts/globerlight.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Regular";
+  src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+  font-display: swap;
+}
